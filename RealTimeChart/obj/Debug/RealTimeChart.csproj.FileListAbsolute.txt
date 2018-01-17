@@ -1,0 +1,141 @@
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\RealTimeChart.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\RealTimeChart.pdb
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Antlr3.Runtime.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.AspNet.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.Core.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\EntityFramework.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Web.Infrastructure.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\System.Web.Optimization.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\System.Web.Providers.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\WebGrease.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\EntityFramework.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.Core.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.AspNet.xml
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.dll
+c:\users\admin\documents\visual studio 2012\Projects\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Security.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Owin.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Security.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\RealTimeChart\RealTimeChart\bin\Newtonsoft.Json.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\RealTimeChart.dll.config
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\RealTimeChart.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\RealTimeChart.pdb
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Antlr3.Runtime.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.Core.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\EntityFramework.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Security.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Newtonsoft.Json.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Owin.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\System.Web.Optimization.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\System.Web.Providers.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\WebGrease.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Mono.Math.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Microsoft.Owin.Security.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Newtonsoft.Json.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\EntityFramework.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.Core.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\bin\Mono.Math.xml
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.dll
+C:\Users\user\Downloads\RealTimeChart\RealTimeChart\RealTimeChart\obj\Debug\RealTimeChart.pdb
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\RealTimeChart.dll.config
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\RealTimeChart.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\RealTimeChart.pdb
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Antlr3.Runtime.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\AspNet.ScriptManager.jQuery.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.AspNet.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.Core.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OAuth.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OpenId.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\EntityFramework.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Owin.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Owin.Security.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.ScriptManager.WebForms.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Web.Infrastructure.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Newtonsoft.Json.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Owin.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\System.Web.Optimization.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\System.Web.Providers.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\WebGrease.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Org.Mentalis.Security.Cryptography.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Mono.Math.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Owin.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Microsoft.Owin.Security.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Newtonsoft.Json.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\EntityFramework.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.Core.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OAuth.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OpenId.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\DotNetOpenAuth.AspNet.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Org.Mentalis.Security.Cryptography.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\bin\Mono.Math.xml
+D:\tmp\RealTimeChart_V2\RealTimeChart\obj\Debug\RealTimeChart.csprojResolveAssemblyReference.cache
+D:\tmp\RealTimeChart_V2\RealTimeChart\obj\Debug\RealTimeChart.csproj.CoreCompileInputs.cache
+D:\tmp\RealTimeChart_V2\RealTimeChart\obj\Debug\RealTimeChart.dll
+D:\tmp\RealTimeChart_V2\RealTimeChart\obj\Debug\RealTimeChart.pdb
