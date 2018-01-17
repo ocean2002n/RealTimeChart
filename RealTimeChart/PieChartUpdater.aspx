@@ -1,6 +1,18 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="PieChartUpdater.aspx.cs" Inherits="RealTimeChart.PieChartUpdater" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+    <style>
+        #custom-handle {
+            width: 3em;
+            height: 1.6em;
+            top: 50%;
+            margin-top: -.8em;
+            text-align: center;
+            line-height: 1.6em;
+        }
+    </style>
+    <link href="Scripts/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" rel="stylesheet" />
+    <link href="Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/Chart.min.js" type="text/javascript"></script>
     <script src="Scripts/Chart.bundle.js"></script>
@@ -56,12 +68,23 @@
                 .done(function () {
                     chartHub.server.initPieChartData();
                 });
-            document.getElementById('sendmessage').addEventListener('click', function () {
+            $('#sendmessage').click(function () {
                 var pieChartdata = $('#percent1').val();
                 chartHub.server.setPicData(pieChartdata);
             });
             $("#reset").click(function () {
                 chartHub.server.resetData();
+            });
+
+            var handle = $("#custom-handle");
+            $("#slider").slider({
+                create: function () {
+                    handle.text($(this).slider("value"));
+                },
+                slide: function (event, ui) {
+                    handle.text(ui.value);
+                    $('#percent1').val(ui.value);
+                }
             });
         });
     </script>
@@ -81,9 +104,17 @@
         <table style="width: 100%">
             <tr>
                 <td style="width: 50%; text-align: center">
-                    <input type="text" class="form-control" placeholder="Percent1" id="percent1" />
-                    <input type="text" class="form-control" placeholder="Percent2" id="percent2" />
+                    <div id="slider">
+                        <div id="custom-handle" class="ui-slider-handle"></div>
+                    </div>
+                    <br />
+                    <input type="text" class="form-control" placeholder="input" id="percent1" />
+                    <%--<input type="text" class="form-control" placeholder="Percent2" id="percent2" />--%>
                     <input type="button" class="btn btn-default" id="sendmessage" value="發送" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <input type="button" class="btn btn-default" id="reset" value="重設" />
                 </td>
                 <td style="width: 50%; text-align: center">
