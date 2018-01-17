@@ -8,13 +8,11 @@
     <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
     <script src="/signalr/hubs"></script>
     <script>
-        
-        $(function () {
 
+        $(function () {
             var randomScalingFactor = function () {
                 return Math.round(Math.random() * 100);
             };
-
             var config = {
                 type: 'pie',
                 data: {
@@ -58,24 +56,15 @@
                 .done(function () {
                     chartHub.server.initPieChartData();
                 });
-            
             document.getElementById('sendmessage').addEventListener('click', function () {
                 var pieChartdata = $('#percent1').val();
-                chartHub.server.setPieChartData(pieChartdata);
+                chartHub.server.setPicData(pieChartdata);
             });
-
-            //PieChart Update method
-            function UpdatePieChart(data) {
-                config.data.datasets.forEach(function (dataset) {
-                    dataset.data = data.value;
-                });
-                window.myPie.update();
-            }
-
+            $("#reset").click(function () {
+                chartHub.server.resetData();
+            });
         });
-        
     </script>
-    
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <section class="featured">
@@ -89,18 +78,19 @@
             </p>
         </div>
 
-        <table style="width: 100%">       
+        <table style="width: 100%">
             <tr>
                 <td style="width: 50%; text-align: center">
                     <input type="text" class="form-control" placeholder="Percent1" id="percent1" />
                     <input type="text" class="form-control" placeholder="Percent2" id="percent2" />
                     <input type="button" class="btn btn-default" id="sendmessage" value="發送" />
+                    <input type="button" class="btn btn-default" id="reset" value="重設" />
                 </td>
                 <td style="width: 50%; text-align: center">
                     <canvas id="canvasForPieChart" height="200" width="400">Chart is Loading...</canvas>
                 </td>
             </tr>
-       
+
         </table>
     </section>
 </asp:Content>

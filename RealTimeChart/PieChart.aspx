@@ -24,14 +24,11 @@
                     //$("#divPics").append("<br>");
                     //alert(i);
                 }
-
                 //<img src="Content/background.jpg" alt="Smiley face" height="42" width="42">
             }
 
-
-            $("#test").click(function () { ShowPics($("#testValue").val()); })
+            $("#test").click(function () { ShowPics(100); })
             function ShowPics(index) {
-
                 for (var i = 1; i <= index; i++) {
                     var img = $("#divPics").find("#theImg_" + i);
                     if (!img.is(":visible")) {
@@ -45,17 +42,19 @@
 
             //Call InitChartData 
             $.connection.hub.start().done(function () {
-                chartHub.server.initPieChartData();
+                // chartHub.server.initPieChartData();
             });
 
             //Call to Update LineChart from Server
             chartHub.client.updatePieChart = function (pie_data) {
                 // UpdatePieChart(pie_data);     //Call the PieChart Update method
-                alert(pie_data);
-                alert(pie_data.value);
+                //alert(pie_data);              
                 ShowPics(pie_data);
             };
 
+            chartHub.client.resetData = function () {
+                $("#divPics img").hide();
+            };
         });
     </script>
 
@@ -65,19 +64,14 @@
         <div class="content-wrapper">
             <hgroup class="title">
                 <h1>SignalR Chart Demo</h1>
-
             </hgroup>
             <p>
                 Open multiple HTML5 compatible Browsers to see the Chart in Real time
             </p>
-            <input type="text" id="testValue">
-            <div id="test">來來來來</div>
 
+            <div id="test">新光</div>
         </div>
-
         <div id="divPics" style="background-image: url(/Content/pics/bg.jpg); width: 1000px; height: 1000px">
         </div>
     </section>
-
-
 </asp:Content>
