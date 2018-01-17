@@ -1,6 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="PieChart.aspx.cs" Inherits="RealTimeChart.PieChart1" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+    <style>
+        img {
+            float: left;
+        }
+    </style>
+
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/Chart.min.js" type="text/javascript"></script>
     <script src="Scripts/Chart.bundle.js"></script>
@@ -10,65 +16,49 @@
     <script>
 
         $(function () {
+            $("#divPics")
+            for (var i = 1; i <= 100; i++) {
 
-            var randomScalingFactor = function () {
-                return Math.round(Math.random() * 100);
-            };
+                $("#divPics").append('<img id="theImg_' + i + '" src="Content/pics/' + i + '.jpg" height="100px" width="100px"  style="display: none;"/>')
+                if (i % 10 == 0) {
+                    //$("#divPics").append("<br>");
+                    //alert(i);
+                }
 
-            var config = {
-                type: 'pie',
-                data: {
-                    datasets: [{
-                        data: [
-                            randomScalingFactor(),
-                            randomScalingFactor()
-                        ],
-                        backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(255, 159, 64)'
-                        ],
-                        label: 'Dataset 1'
-                    }],
-                    labels: [
-                        "Red",
-                        "Orange"
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    animation: {
-                        duration: 0
+                //<img src="Content/background.jpg" alt="Smiley face" height="42" width="42">
+            }
+
+
+            $("#test").click(function () { ShowPics($("#testValue").val()); })
+            function ShowPics(index) {
+
+                for (var i = 1; i <= index; i++) {
+                    var img = $("#divPics").find("#theImg_" + i);
+                    if (!img.is(":visible")) {
+                        img.show("drop", 2000);
                     }
                 }
-            };
-
-            var ctx = document.getElementById("canvasForPieChart").getContext("2d");
-            window.myPie = new Chart(ctx, config);
+            }
 
             //Create the Hub
             var chartHub = $.connection.chartHub;
 
             //Call InitChartData 
-            $.connection.hub.start().done(function () {            
+            $.connection.hub.start().done(function () {
                 chartHub.server.initPieChartData();
             });
 
             //Call to Update LineChart from Server
             chartHub.client.updatePieChart = function (pie_data) {
-                UpdatePieChart(pie_data);     //Call the PieChart Update method
+                // UpdatePieChart(pie_data);     //Call the PieChart Update method
+                alert(pie_data);
+                alert(pie_data.value);
+                ShowPics(pie_data);
             };
 
-            //PieChart Update method
-            function UpdatePieChart(data) {
-                config.data.datasets.forEach(function (dataset) {
-                    dataset.data = data.value;
-                });
-                window.myPie.update();
-            }
-            
         });
     </script>
-    
+
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <section class="featured">
@@ -79,67 +69,15 @@
             </hgroup>
             <p>
                 Open multiple HTML5 compatible Browsers to see the Chart in Real time
-                
             </p>
-        </div>
- 
+            <input type="text" id="testValue">
+            <div id="test">來來來來</div>
 
-        <table style="width: 100%">       
-            <tr>
-                <canvas id="canvasForPieChart" height="400" width="400">Chart is Loading...</canvas>
-            </tr>
-        </table>
+        </div>
+
+        <div id="divPics" style="background-image: url(/Content/pics/bg.jpg); width: 1000px; height: 1000px">
+        </div>
     </section>
 
-
-    <%--<script type="text/javascript">
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Line Chart JSON Config (Line Chart Has fixed 1 data series here)
-        var lineChartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {				    
-                    fillColor: "",
-                    data: [0]
-                }
-            ]
-
-        }
-
-        //Pie Chart JSON Config (Pie Chart Has fixed 3 Values/Slices here)
-        var pieChartdata = [
-            {
-                value: 0,
-                color: "#F7464A",                        
-                label: "East"
-            },
-            {
-                value: 0,
-                color: "#46BFBD",                         
-                label: "West"
-            },
-            {
-                value: 0,
-                color: "#FDB45C",                         
-                label: "North"
-            }
-        ]
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////
-       
-        //PieChart Update method
-        function UpdatePieChart(data) {
-            //Set data returned from Server            
-            pieChartdata[0].value = data.value[0];
-            pieChartdata[1].value = data.value[1];
-            pieChartdata[2].value = data.value[2];
-            //Update the Line Chart
-            var canvasForPieChart = document.getElementById("canvasForPieChart");
-            var context2DPie = canvasForPieChart.getContext("2d");
-            new Chart(context2DPie).Pie(pieChartdata);
-
-        }
-
-    </script>--%>
 
 </asp:Content>

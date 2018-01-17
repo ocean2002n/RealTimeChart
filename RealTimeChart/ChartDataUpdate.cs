@@ -65,6 +65,12 @@ namespace RealTimeChart
             pieChartData[0] = data[0];
             pieChartData[1] = data[1];
         }
+
+        public void SetPieChartData(int data)
+        {
+            pieChartData = new int[1];
+            pieChartData[0] = 0;
+        }
     }
 
 

@@ -54,5 +54,16 @@ namespace RealTimeChart
 
         }
 
+        public void SetPicData(int data)
+        {
+            PieChart pieChart = new PieChart();
+            pieChart.SetPieChartData(data);
+            Clients.All.UpdatePieChart(pieChart);
+
+            //Call GetChartData to send Chart data every 5 seconds
+            _ChartInstance.GetPieChartData();
+
+        }
+
     }
 }

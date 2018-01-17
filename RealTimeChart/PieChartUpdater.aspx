@@ -60,7 +60,7 @@
                 });
             
             document.getElementById('sendmessage').addEventListener('click', function () {
-                var pieChartdata = [$('#percent1').val(), $('#percent2').val()];
+                var pieChartdata = $('#percent1').val();
                 chartHub.server.setPieChartData(pieChartdata);
             });
 
