@@ -186,3 +186,4 @@ D:\realtimeChart\RealTimeChart\bin\Org.Mentalis.Security.Cryptography.xml
 D:\realtimeChart\RealTimeChart\bin\Mono.Math.xml
 D:\realtimeChart\RealTimeChart\obj\Debug\RealTimeChart.dll
 D:\realtimeChart\RealTimeChart\obj\Debug\RealTimeChart.pdb
+D:\realtimeChart\RealTimeChart\obj\Debug\RealTimeChart.csprojResolveAssemblyReference.cache

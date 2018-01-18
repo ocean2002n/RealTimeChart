@@ -57,12 +57,28 @@ namespace RealTimeChart
         }
 
         /// <summary>
-        /// 通知前端更新
+        /// 通知前端清除
         /// </summary>
         /// <param name="data"></param>
         public void ResetData()
         {
             Clients.All.ResetData();
+        }
+
+        /// <summary>
+        /// 跳歡迎董ㄟ訊息
+        /// </summary>
+        public void WelcomeMsg(int mode)
+        {
+            Clients.All.WelcomeMsg(mode);
+        }
+
+        /// <summary>
+        /// 結束
+        /// </summary>
+        public void Done()
+        {
+            Clients.All.Done();
         }
     }
 }

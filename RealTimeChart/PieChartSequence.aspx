@@ -3,14 +3,15 @@
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <style>
         img {
-            height: 100px;
-            width: 100px;
-            float: left;
+            height: 102.4px;
+            width: 76.8px;
+            /*float: ;*/
+            display:flex;
         }
 
         td {
-            height: 100px;
-            width: 100px;
+            height: 102.4px;
+            width: 76.8px;
             padding: 0;
         }
     </style>
@@ -25,13 +26,16 @@
 
         $(function () {
 
-            for (var i = 1; i <= 100; i++) {
-                $("#divPics").append('<img id="theImg_' + i + '" src="Content/pics/' + i + '.jpg" height="100px" width="100px"  style="display: none;"/>')
+            for (var i = 9; i > 0; i--) {
+                for (var j = 1; j <= 10; j++) {
+                    var index = i.toString() + j.toString();
+                    $("#divPics").append('<img id="theImg_' + index + '" src="Content/pics/' + index + '.jpg" height="100px" width="100px"  style="display: none;"/>')
+                }
             }
 
             $("#test").click(function () {
                 ShowPics(100);
-                
+
             })
 
 

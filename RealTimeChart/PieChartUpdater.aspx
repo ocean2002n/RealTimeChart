@@ -22,38 +22,38 @@
     <script>
 
         $(function () {
-            var randomScalingFactor = function () {
-                return Math.round(Math.random() * 100);
-            };
-            var config = {
-                type: 'pie',
-                data: {
-                    datasets: [{
-                        data: [
-                            randomScalingFactor(),
-                            randomScalingFactor()
-                        ],
-                        backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(255, 159, 64)'
-                        ],
-                        label: 'Dataset 1'
-                    }],
-                    labels: [
-                        "Red",
-                        "Orange"
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    animation: {
-                        duration: 0
-                    }
-                }
-            };
+            //var randomScalingFactor = function () {
+            //    return Math.round(Math.random() * 100);
+            //};
+            //var config = {
+            //    type: 'pie',
+            //    data: {
+            //        datasets: [{
+            //            data: [
+            //                randomScalingFactor(),
+            //                randomScalingFactor()
+            //            ],
+            //            backgroundColor: [
+            //                'rgb(255, 99, 132)',
+            //                'rgb(255, 159, 64)'
+            //            ],
+            //            label: 'Dataset 1'
+            //        }],
+            //        labels: [
+            //            "Red",
+            //            "Orange"
+            //        ]
+            //    },
+            //    options: {
+            //        responsive: true,
+            //        animation: {
+            //            duration: 0
+            //        }
+            //    }
+            //};
 
-            var ctx = document.getElementById("canvasForPieChart").getContext("2d");
-            window.myPie = new Chart(ctx, config);
+            //var ctx = document.getElementById("canvasForPieChart").getContext("2d");
+            //window.myPie = new Chart(ctx, config);
 
             var chartHub = $.connection.chartHub;
 
@@ -76,6 +76,18 @@
                 chartHub.server.resetData();
             });
 
+            $("#welcome").click(function () {
+                chartHub.server.welcomeMsg(1);
+            });
+            $("#closeWelcome").click(function () {
+                chartHub.server.welcomeMsg(0);
+            });
+
+            $("#done").click(function () {
+                chartHub.server.done();
+            });
+
+            //拉霸
             var handle = $("#custom-handle");
             $("#slider").slider({
                 create: function () {
@@ -96,14 +108,13 @@
                 <h1>SignalR Chart Demo</h1>
 
             </hgroup>
-            <p>
-                Open multiple HTML5 compatible Browsers to see the Chart in Real time
-            </p>
+
         </div>
 
-        <table style="width: 100%">
+
+        <table>
             <tr>
-                <td style="width: 50%; text-align: center">
+                <td style="text-align: left">
                     <div id="slider">
                         <div id="custom-handle" class="ui-slider-handle"></div>
                     </div>
@@ -115,13 +126,22 @@
                     <br />
                     <br />
                     <br />
+
+
+                    <input type="button" class="btn btn-default" id="welcome" value="顯示歡迎訊息" />
+                    <input type="button" class="btn btn-default" id="closeWelcome" value="取消訊息" />
+                    <br />
+
+
+                    <input type="button" class="btn btn-default" id="done" value="完成" />
+                    <br />
+
                     <input type="button" class="btn btn-default" id="reset" value="重設" />
                 </td>
-                <td style="width: 50%; text-align: center">
-                    <canvas id="canvasForPieChart" height="200" width="400">Chart is Loading...</canvas>
-                </td>
+
             </tr>
 
         </table>
+        <%--<canvas id="canvasForPieChart" height="200" width="400">Chart is Loading...</canvas>--%>
     </section>
 </asp:Content>

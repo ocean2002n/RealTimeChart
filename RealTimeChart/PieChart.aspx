@@ -3,15 +3,55 @@
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <style>
         img {
-            height: 100px;
-            width: 100px;
-            display: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        #tbPics {
+            width: 1024px;
+            height: 768px;
+            border: none;
         }
 
         td {
-            height: 100px;
-            width: 100px;
+            width: 102.4px;
+            height: 76.8px;
             padding: 0;
+        }
+
+        #divPics {
+            position: absolute;
+
+            background-image: url(/Content/pics/bg.jpg);
+            width: 1024px;
+            height: 768px;
+        }
+
+        #divDone {
+            position: absolute;
+            background-image: url(/Content/pics/done.jpg);
+            width: 1024px;
+            height: 768px;
+            display: none;
+        }
+
+        #divMsg {
+            width: 1024px;
+            height: 768px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            /*border: 2px solid black;*/
+            background-color: #ddd;
+            opacity: 0.65;
+            text-align: center;
+            line-height: 768px;
+            color: red;
+            font-size: 10em;
+            display: none;
+            z-index: 9999;
+            font-family: 'Microsoft JhengHei';
         }
     </style>
 
@@ -25,14 +65,24 @@
 
         $(function () {
             var maxLength = [];
-            for (var i = 1; i <= 100; i++) { maxLength.push(i); }
-            newMaxLength = shuffle(maxLength);
 
-            var i = 0;
-            $("#tbPics td ").each(function () {
-                $(this).html('<img id="theImg_' + newMaxLength[i] + '" src="Content/pics/' + newMaxLength[i] + '.jpg"  />');
-                i++
+            for (var i = 9; i >= 0; i--) {
+                for (var j = 1; j <= 10; j++) {
+                    maxLength.push(i * 10 + j);
+                }
+            }
+            // newMaxLength = shuffle(maxLength);
+            //alert(maxLength);
+            var k = 0;
+            $("#tbPics td").each(function () {
+                $(this).html('<img id="theImg_' + maxLength[k] + '" src="Content/pics/' + maxLength[k] + '.jpg"/>');
+                k++
             });
+
+            $("#tbPics img").hide();
+
+            var offset = $("#tbPics").offset();
+            $("#divMsg").offset({ top: offset.top, left: offset.left });
 
             function shuffle(array) {
                 var currentIndex = array.length, temporaryValue, randomIndex;
@@ -69,7 +119,7 @@
                 for (var i = 1; i <= index; i++) {
                     var img = $("#theImg_" + i);
                     if (!img.is(":visible")) {
-                        img.show("drop", 2000);
+                        img.show("drop", 2000).attr("display", "block");
                     }
                 }
             }
@@ -87,7 +137,26 @@
                 ShowPics(pie_data);
             };
 
-            chartHub.client.resetData = function () { $("#tbPics img").hide(); };
+            chartHub.client.resetData = function () {
+                $("#tbPics img").hide();
+                $("#divPics").show();
+                $("#divDone").hide();
+            };
+            chartHub.client.welcomeMsg = function (mode) {
+                if (mode === 1) {
+                    $("#divMsg").show("clip", 2000);
+
+                } else {
+                    $("#divMsg").hide("clip", 2000);
+
+                }
+            };
+            chartHub.client.done = function () {
+                $("#divPics").hide("drop", 2000);
+                $("#divDone").show("explode", 2000);
+
+            };
+
         });
     </script>
 
@@ -96,16 +165,14 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>SignalR Chart Demo</h1>
+                <h1 id="test">新光
+                </h1>
             </hgroup>
-            <p>
-                Open multiple HTML5 compatible Browsers to see the Chart in Real time
-            </p>
-
-            <div id="test">新光</div>
         </div>
-        <div style="background-image: url(/Content/pics/bg.png); width: 1000px; height: 1000px">
-            <table style="width: 100%" id="tbPics">
+        <div id="divMsg">董ㄟ 哩後</div>
+        <div id="divDone"></div>
+        <div id="divPics">
+            <table id="tbPics">
                 <tr>
                     <td></td>
                     <td></td>
@@ -228,5 +295,6 @@
                 </tr>
             </table>
         </div>
+
     </section>
 </asp:Content>
