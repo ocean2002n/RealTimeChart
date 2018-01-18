@@ -112,7 +112,7 @@
         </div>
 
 
-        <table>
+        <table >
             <tr>
                 <td style="text-align: left">
                     <div id="slider">
@@ -122,25 +122,29 @@
                     <input type="text" class="form-control" placeholder="input" id="percent1" />
                     <%--<input type="text" class="form-control" placeholder="Percent2" id="percent2" />--%>
                     <input type="button" class="btn btn-default" id="sendmessage" value="發送" />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
 
 
-                    <input type="button" class="btn btn-default" id="welcome" value="顯示歡迎訊息" />
-                    <input type="button" class="btn btn-default" id="closeWelcome" value="取消訊息" />
-                    <br />
 
-
-                    <input type="button" class="btn btn-default" id="done" value="完成" />
-                    <br />
-
-                    <input type="button" class="btn btn-default" id="reset" value="重設" />
                 </td>
 
             </tr>
+            <tr>
+                <td>
 
+                    <input type="button" class="btn btn-default" id="welcome" value="顯示歡迎訊息" />
+                    <input type="button" class="btn btn-default" id="closeWelcome" value="取消訊息" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="btn btn-default" id="done" value="完成" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="btn btn-default" id="reset" value="重設" />
+                </td>
+            </tr>
         </table>
         <%--<canvas id="canvasForPieChart" height="200" width="400">Chart is Loading...</canvas>--%>
     </section>

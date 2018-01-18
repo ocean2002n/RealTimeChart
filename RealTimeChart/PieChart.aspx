@@ -118,8 +118,12 @@
                 if (index > 100) index = 100;
                 for (var i = 1; i <= index; i++) {
                     var img = $("#theImg_" + i);
+                    //alert(img.attr("id"));
                     if (!img.is(":visible")) {
-                        img.show("drop", 2000).attr("display", "block");
+                        //setInterval(function () {
+                        img.show("drop", 2000);
+                            //$('#test').fadeIn('slow');
+                        //}, 1000);
                     }
                 }
             }
@@ -152,6 +156,7 @@
                 }
             };
             chartHub.client.done = function () {
+                $("#divMsg").hide();
                 $("#divPics").hide("drop", 2000);
                 $("#divDone").show("explode", 2000);
 
@@ -169,7 +174,7 @@
                 </h1>
             </hgroup>
         </div>
-        <div id="divMsg">董ㄟ 哩後</div>
+        <div id="divMsg">董ㄟ 來啊</div>
         <div id="divDone"></div>
         <div id="divPics">
             <table id="tbPics">
