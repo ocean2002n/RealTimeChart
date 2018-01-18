@@ -303,6 +303,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="PieChartSequence.aspx" />
     <Content Include="PieChart.aspx" />
     <Content Include="PieChartUpdater.aspx" />
     <Content Include="Scripts\Chart.bundle.js" />
@@ -378,6 +379,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PieChartSequence.aspx.cs">
+      <DependentUpon>PieChartSequence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PieChartSequence.aspx.designer.cs">
+      <DependentUpon>PieChartSequence.aspx</DependentUpon>
     </Compile>
     <Compile Include="PieChart.aspx.cs">
       <DependentUpon>PieChart.aspx</DependentUpon>
