@@ -77,10 +77,10 @@
             });
 
             $("#welcome").click(function () {
-                chartHub.server.welcomeMsg(1);
+                chartHub.server.welcomeMsg(1, $("#msg").val());
             });
             $("#closeWelcome").click(function () {
-                chartHub.server.welcomeMsg(0);
+                chartHub.server.welcomeMsg(0, $("#msg").val());
             });
 
             $("#done").click(function () {
@@ -112,14 +112,14 @@
         </div>
 
 
-        <table >
+        <table>
             <tr>
                 <td style="text-align: left">
                     <div id="slider">
                         <div id="custom-handle" class="ui-slider-handle"></div>
                     </div>
                     <br />
-                    <input type="text" class="form-control" placeholder="input" id="percent1" />
+                    <input type="text" class="form-control" id="percent1" value="0" />
                     <%--<input type="text" class="form-control" placeholder="Percent2" id="percent2" />--%>
                     <input type="button" class="btn btn-default" id="sendmessage" value="發送" />
 
@@ -130,7 +130,8 @@
             </tr>
             <tr>
                 <td>
-
+                    <input type="text" class="form-control" id="msg" value="董事長來了" />
+                    <%-- <br />--%>
                     <input type="button" class="btn btn-default" id="welcome" value="顯示歡迎訊息" />
                     <input type="button" class="btn btn-default" id="closeWelcome" value="取消訊息" />
                 </td>

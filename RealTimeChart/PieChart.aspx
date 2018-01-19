@@ -22,7 +22,6 @@
 
         #divPics {
             position: absolute;
-
             background-image: url(/Content/pics/bg.jpg);
             width: 1024px;
             height: 768px;
@@ -53,6 +52,16 @@
             z-index: 9999;
             font-family: 'Microsoft JhengHei';
         }
+
+        .marquee {
+            width: 1024px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background: #ccc;
+            font-size: 3em;
+            color: red;
+            font-family: 'Microsoft JhengHei';
+        }
     </style>
 
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
@@ -61,6 +70,7 @@
     <script src="Scripts/jquery-ui-1.8.20.min.js"></script>
     <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
     <script src="/signalr/hubs"></script>
+    <script src="Scripts/jQuery.Marquee-master/jquery.marquee.min.js"></script>
     <script>
 
         $(function () {
@@ -122,7 +132,7 @@
                     if (!img.is(":visible")) {
                         //setInterval(function () {
                         img.show("drop", 2000);
-                            //$('#test').fadeIn('slow');
+                        //$('#test').fadeIn('slow');
                         //}, 1000);
                     }
                 }
@@ -143,10 +153,12 @@
 
             chartHub.client.resetData = function () {
                 $("#tbPics img").hide();
-                $("#divPics").show();
+                $("#divMsg").hide();
                 $("#divDone").hide();
+                $("#divPics").show();
             };
-            chartHub.client.welcomeMsg = function (mode) {
+            chartHub.client.welcomeMsg = function (mode, msg) {
+                $("#divMsg").html(msg);
                 if (mode === 1) {
                     $("#divMsg").show("clip", 2000);
 
@@ -162,6 +174,7 @@
 
             };
 
+            $('.marquee').marquee({ duration: 5000, });
         });
     </script>
 
@@ -174,7 +187,7 @@
                 </h1>
             </hgroup>
         </div>
-        <div id="divMsg">董ㄟ 來啊</div>
+        <div id="divMsg"></div>
         <div id="divDone"></div>
         <div id="divPics">
             <table id="tbPics">
@@ -301,5 +314,7 @@
             </table>
         </div>
 
+
+        <div class="marquee">光無所不在，心與你同在  數資好棒棒~~ 中大獎中大獎</div>
     </section>
 </asp:Content>

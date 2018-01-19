@@ -68,9 +68,9 @@ namespace RealTimeChart
         /// <summary>
         /// 跳歡迎董ㄟ訊息
         /// </summary>
-        public void WelcomeMsg(int mode)
+        public void WelcomeMsg(int mode, string msg)
         {
-            Clients.All.WelcomeMsg(mode);
+            Clients.All.WelcomeMsg(mode, msg);
         }
 
         /// <summary>

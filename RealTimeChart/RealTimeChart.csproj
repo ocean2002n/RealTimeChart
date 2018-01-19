@@ -334,6 +334,8 @@
     <Content Include="Scripts\jquery-ui-1.12.1.custom\LICENSE.txt" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jQuery.Marquee-master\jquery.marquee.js" />
+    <Content Include="Scripts\jQuery.Marquee-master\jquery.marquee.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
@@ -419,6 +421,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-ui-1.12.1.custom\package.json" />
+    <Content Include="Scripts\jQuery.Marquee-master\bower.json" />
+    <Content Include="Scripts\jQuery.Marquee-master\info.ini" />
+    <Content Include="Scripts\jQuery.Marquee-master\licence" />
+    <Content Include="Scripts\jQuery.Marquee-master\marquee.jquery.json" />
+    <Content Include="Scripts\jQuery.Marquee-master\package.json" />
+    <Content Include="Scripts\jQuery.Marquee-master\README.md" />
+    <Content Include="Scripts\jQuery.Marquee-master\update.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
