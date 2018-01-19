@@ -15,25 +15,24 @@
 </head>
 <body>
     <form runat="server">    
-    <header>
+   <%-- <header>
         <div class="content-wrapper">
            
             
         </div>
-    </header>
+    </header>--%>
     <div id="body">
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
+       
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
     </div>
-    <footer>
+   <%-- <footer>
         <div class="content-wrapper">
             <div class="float-left">
                 <p>&copy; <%: DateTime.Now.Year %> -Julian Joseph</p>
             </div>
         </div>
-    </footer>
+    </footer>--%>
     </form>
 </body>
 </html>

@@ -80,5 +80,10 @@ namespace RealTimeChart
         {
             Clients.All.Done();
         }
+
+        public void RunMsg(int mode)
+        {
+            Clients.All.RunMsg(mode);
+        }
     }
 }

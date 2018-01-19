@@ -87,6 +87,13 @@
                 chartHub.server.done();
             });
 
+            $("#runrunrun").click(function () {
+                chartHub.server.runMsg(1);
+            });
+            $("#stopRun").click(function () {
+                chartHub.server.runMsg(0);
+            });
+
             //拉霸
             var handle = $("#custom-handle");
             $("#slider").slider({
@@ -105,7 +112,7 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>SignalR Chart Demo</h1>
+                <h1>後台</h1>
 
             </hgroup>
 
@@ -121,7 +128,7 @@
                     <br />
                     <input type="text" class="form-control" id="percent1" value="0" />
                     <%--<input type="text" class="form-control" placeholder="Percent2" id="percent2" />--%>
-                    <input type="button" class="btn btn-default" id="sendmessage" value="發送" />
+                    <input type="button" class="btn btn-default" id="sendmessage" value="更新" />
 
 
 
@@ -129,20 +136,26 @@
 
             </tr>
             <tr>
-                <td>
-                    <input type="text" class="form-control" id="msg" value="董事長來了" />
+                <td><br />
+                    <input type="text" class="form-control" id="msg" value="董事長QR Code報到成功！" />
                     <%-- <br />--%>
                     <input type="button" class="btn btn-default" id="welcome" value="顯示歡迎訊息" />
                     <input type="button" class="btn btn-default" id="closeWelcome" value="取消訊息" />
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><br />
                     <input type="button" class="btn btn-default" id="done" value="完成" />
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><br />
+                    <input type="button" class="btn btn-default" id="runrunrun" value="跑馬燈" />
+                    <input type="button" class="btn btn-default" id="stopRun" value="停止跑馬燈" />
+                </td>
+            </tr>
+            <tr>
+                <td><br />
                     <input type="button" class="btn btn-default" id="reset" value="重設" />
                 </td>
             </tr>
