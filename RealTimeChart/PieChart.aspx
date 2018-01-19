@@ -129,17 +129,43 @@
 
 
             function ShowPics(index) {
+                var tds = [];
                 if (index > 100) index = 100;
+                //for (var i = 1; i <= index; i++) {
+                //    var img = $("#theImg_" + i);
+                //    if (!img.is(":visible")) {
+                //        //setInterval(function () {
+                //        //img.show("drop", 2500);
+                //        //$('#test').fadeIn('slow');
+                //        //}, 1024);
+                //    }
+                //}
+
+
                 for (var i = 1; i <= index; i++) {
                     var img = $("#theImg_" + i);
                     if (!img.is(":visible")) {
-                        //setInterval(function () {
-                        img.show("drop", 2500);
-                        //$('#test').fadeIn('slow');
-                        //}, 1024);
+                        tds.push(img);
                     }
+                    //if (!img.is(":visible")) {
+                    //    img.show("drop", 2500, function showNext() {
+                    //        if (i + 1 <= index) {
+
+                    //            img = $("#theImg_" + (i + 1))
+                    //            img.show("drop", 2500, showNext);
+                    //        }
+                    //    });
+                    //    break;
+                    //}
                 }
+
+                var j = 0;
+                tds[j].show("drop", 1000, function showNext() {
+                    tds[++j].show("drop", 1000, showNext);
+                });
             }
+
+
 
             //Create the Hub
             var chartHub = $.connection.chartHub;
