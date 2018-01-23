@@ -2,14 +2,15 @@
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <style>
+        body {
+            border-top: 0px;
+            margin: 0px;
+        }
+
         img {
             width: 100%;
             height: 100%;
             display: block;
-        }
-
-        body {
-            border-top: 0px;
         }
 
         #tbPics {
@@ -17,23 +18,24 @@
             height: 1080px;
             border: none;
             border-spacing: 0px;
+            overflow: hidden;
         }
 
         td {
-            width: 192.0px;
-            height: 108.0px;
+            width: 192px;
+            height: 108px;
             padding: 0;
         }
 
         #divPics {
             position: absolute;
-            /* background-size: contain;
-            background-image: url(/Content/pics/bg.jpg);
-            background-repeat: no-repeat;*/
+            background-size: contain;
+            /* background-image: url(/Content/pics/bg.jpg);
+           */ background-repeat: no-repeat;
             background-color: rgb(236, 237, 238);
             width: 1920px;
             height: 1080px;
-            overflow: hidden !important;
+            overflow: hidden;
             /*display:block;*/
         }
 
@@ -54,7 +56,7 @@
             height: 300px;
             position: absolute;
             left: 0px;
-            top: 300px;
+            top: 400px;
             /*border: 2px solid black;*/
             background-color: red;
             opacity: 0.65;
@@ -87,6 +89,7 @@
             text-shadow: 1px 1px 0 #fff;
             font-family: 'monospace';
             z-index: 9998;
+            color: red;
         }
     </style>
 
@@ -130,16 +133,16 @@
                     }
                 }
 
-                setTimeout(progress, 100);
-
-                var j = 0;
-                tds[j].show("drop", 1000, function showNext() {
-                    setTimeout(progress, 100);
-
-                    if (j < tds.length - 1) {
-                        tds[++j].show("drop", 1000, showNext);
-                    }
-                });
+                //setTimeout(progress, 100);
+                if (tds.length > 0) {
+                    var j = 0;
+                    tds[j].show("drop", 1000, function showNext() {
+                        if (j < tds.length - 1) {
+                            //setTimeout(progress, 100);
+                            tds[++j].show("drop", 1000, showNext);
+                        }
+                    });
+                }
             }
 
             var progressbar = $("#progressbar"),
@@ -160,14 +163,14 @@
 
                 if (nowIndex > val) {
                     val += 1;
+                    progressbar.progressbar("value", val);
                 }
-                progressbar.progressbar("value", val);
-                console.log(val);
-                //if (val <= 99) {
-                //    setTimeout(progress, 80);
-                //}
+                //console.log(val);
+                if (val <= 99) {
+                    setTimeout(progress, 500);
+                }
             }
-
+            setTimeout(progress, 2000);
             //Create the Hub
             var chartHub = $.connection.chartHub;
 
@@ -204,6 +207,7 @@
             };
             chartHub.client.runMsg = function (mode) {
                 if (mode === 1) {
+
                     $mq.marquee('resume').show();
                 } else {
                     $mq.marquee('pause').hide();
@@ -344,5 +348,5 @@
             </tr>
         </table>
     </div>
-    <div class="marquee">光無所不在，心與你同在</div>
+    <div class="marquee" id="runrun">光無所不在，心與你同在！</div>
 </asp:Content>

@@ -136,26 +136,31 @@
 
             </tr>
             <tr>
-                <td><br />
-                    <input type="text" class="form-control" id="msg" value="董事長QR Code報到成功！" />
+                <td>
+                    <br />
+                    <input type="text" class="form-control" id="msg" value="董事長報到成功！" />
                     <%-- <br />--%>
                     <input type="button" class="btn btn-default" id="welcome" value="顯示歡迎訊息" />
                     <input type="button" class="btn btn-default" id="closeWelcome" value="取消訊息" />
                 </td>
             </tr>
             <tr>
-                <td><br />
+                <td>
+                    <br />
                     <input type="button" class="btn btn-default" id="done" value="完成" />
                 </td>
             </tr>
             <tr>
-                <td><br />
+                <td>
+                    <br />
+
                     <input type="button" class="btn btn-default" id="runrunrun" value="跑馬燈" />
                     <input type="button" class="btn btn-default" id="stopRun" value="停止跑馬燈" />
                 </td>
             </tr>
             <tr>
-                <td><br />
+                <td>
+                    <br />
                     <input type="button" class="btn btn-default" id="reset" value="重設" />
                 </td>
             </tr>
