@@ -26,8 +26,8 @@
         }
 
         #divPics {
-            /*position: absolute;
-            background-size: contain;
+            position: absolute;
+            /* background-size: contain;
             background-image: url(/Content/pics/bg.jpg);
             background-repeat: no-repeat;*/
             background-color: rgb(236, 237, 238);
@@ -77,6 +77,17 @@
             color: red;
             font-family: 'Microsoft JhengHei';
         }
+
+        .progress-label {
+            position: absolute;
+            left: 1em;
+            top: 1em;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+            font-family: 'monospace';
+            z-index: 9998;
+        }
     </style>
 
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
@@ -108,10 +119,10 @@
                 ShowPics(100);
             })
 
+
             function ShowPics(index) {
                 var tds = [];
                 if (index > 100) index = 100;
-
                 for (var i = 1; i <= index; i++) {
                     var img = $("#theImg_" + i);
                     if (!img.is(":visible")) {
@@ -119,12 +130,42 @@
                     }
                 }
 
+                setTimeout(progress, 100);
+
                 var j = 0;
                 tds[j].show("drop", 1000, function showNext() {
+                    setTimeout(progress, 100);
+
                     if (j < tds.length - 1) {
                         tds[++j].show("drop", 1000, showNext);
                     }
                 });
+            }
+
+            var progressbar = $("#progressbar"),
+                progressLabel = $(".progress-label");
+            progressbar.progressbar({
+                value: 0,
+                change: function () {
+                    progressLabel.text(progressbar.progressbar("value") + "%");
+                },
+                complete: function () {
+                    progressLabel.text("100%");
+                }
+            });
+
+            function progress() {
+                var val = progressbar.progressbar("value") || 0;
+                var nowIndex = $("#tbPics td img:visible").size();
+
+                if (nowIndex > val) {
+                    val += 1;
+                }
+                progressbar.progressbar("value", val);
+                console.log(val);
+                //if (val <= 99) {
+                //    setTimeout(progress, 80);
+                //}
             }
 
             //Create the Hub
@@ -157,6 +198,7 @@
             chartHub.client.done = function () {
                 $('.marquee').stop();
                 $("#divMsg").hide();
+                $("#progressbar").hide();
                 $("#divPics").fadeOut(2000);
                 $("#divDone").show("explode", 3000);
             };
@@ -172,6 +214,10 @@
 
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+
+    <div id="progressbar">
+        <div class="progress-label"></div>
+    </div>
     <div id="divMsg"></div>
     <div id="divDone"></div>
     <div id="divPics">
