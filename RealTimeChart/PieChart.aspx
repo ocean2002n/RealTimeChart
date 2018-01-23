@@ -33,7 +33,7 @@
             background-color: rgb(236, 237, 238);
             width: 1920px;
             height: 1080px;
-            overflow:hidden !important; 
+            overflow: hidden !important;
             /*display:block;*/
         }
 
@@ -45,7 +45,7 @@
             width: 1920px;
             height: 1080px;
             display: none;
-            overflow:hidden;
+            overflow: hidden;
             /*z-index: 9999;*/
         }
 
@@ -89,15 +89,13 @@
         $(function () {
             var $mq = $('.marquee').marquee({ duration: 5000 });
             $mq.marquee('pause');
-            var maxLength = [];
 
+            var maxLength = [];
             for (var i = 9; i >= 0; i--) {
                 for (var j = 1; j <= 10; j++) {
                     maxLength.push(i * 10 + j);
                 }
             }
-            // newMaxLength = shuffle(maxLength);
-            //alert(maxLength);
             var k = 0;
             $("#tbPics td").each(function () {
                 $(this).html('<img id="theImg_' + maxLength[k] + '" src="Content/pics/' + maxLength[k] + '.jpg"/>');
@@ -106,71 +104,28 @@
 
             $("#tbPics img").hide();
 
-            //var offset = $("#tbPics").offset();
-            //$("#divMsg").offset({ top: offset.top, left: offset.left });
-
-            function shuffle(array) {
-                var currentIndex = array.length, temporaryValue, randomIndex;
-
-                // While there remain elements to shuffle...
-                while (0 !== currentIndex) {
-
-                    // Pick a remaining element...
-                    randomIndex = Math.floor(Math.random() * currentIndex);
-                    currentIndex -= 1;
-
-                    // And swap it with the current element.
-                    temporaryValue = array[currentIndex];
-                    array[currentIndex] = array[randomIndex];
-                    array[randomIndex] = temporaryValue;
-                }
-
-                return array;
-            }
-
             $("#test").click(function () {
                 ShowPics(100);
             })
 
-
             function ShowPics(index) {
                 var tds = [];
                 if (index > 100) index = 100;
-                //for (var i = 1; i <= index; i++) {
-                //    var img = $("#theImg_" + i);
-                //    if (!img.is(":visible")) {
-                //        //setInterval(function () {
-                //        //img.show("drop", 2500);
-                //        //$('#test').fadeIn('slow');
-                //        //}, 1024);
-                //    }
-                //}
-
 
                 for (var i = 1; i <= index; i++) {
                     var img = $("#theImg_" + i);
                     if (!img.is(":visible")) {
                         tds.push(img);
                     }
-                    //if (!img.is(":visible")) {
-                    //    img.show("drop", 2500, function showNext() {
-                    //        if (i + 1 <= index) {
-
-                    //            img = $("#theImg_" + (i + 1))
-                    //            img.show("drop", 2500, showNext);
-                    //        }
-                    //    });
-                    //    break;
-                    //}
                 }
 
                 var j = 0;
                 tds[j].show("drop", 1000, function showNext() {
-                    tds[++j].show("drop", 1000, showNext);
+                    if (j < tds.length - 1) {
+                        tds[++j].show("drop", 1000, showNext);
+                    }
                 });
             }
-
-
 
             //Create the Hub
             var chartHub = $.connection.chartHub;
@@ -186,11 +141,6 @@
             };
 
             chartHub.client.resetData = function () {
-                //$('.marquee').stop();
-                //$("#tbPics img").hide();
-                //$("#divMsg").hide();
-                //$("#divDone").hide();
-                //$("#divPics").show();
                 location.reload();
             };
             chartHub.client.welcomeMsg = function (mode, msg) {
@@ -208,17 +158,13 @@
                 $('.marquee').stop();
                 $("#divMsg").hide();
                 $("#divPics").fadeOut(2000);
-                $("#divDone").show("explode"
-
-                    , 3000);
-                //
+                $("#divDone").show("explode", 3000);
             };
             chartHub.client.runMsg = function (mode) {
                 if (mode === 1) {
                     $mq.marquee('resume').show();
                 } else {
                     $mq.marquee('pause').hide();
-
                 }
             };
         });
@@ -226,14 +172,6 @@
 
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <%-- <section>--%>
-    <%--  <div class="content-wrapper">
-            <hgroup class="">
-                <h1 id="test">新光
-                </h1>
-            </hgroup>
-        </div>--%>
-
     <div id="divMsg"></div>
     <div id="divDone"></div>
     <div id="divPics">
@@ -361,5 +299,4 @@
         </table>
     </div>
     <div class="marquee">光無所不在，心與你同在</div>
-    <%--</section>--%>
 </asp:Content>
