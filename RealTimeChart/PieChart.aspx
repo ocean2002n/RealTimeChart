@@ -8,26 +8,32 @@
             display: block;
         }
 
+        body {
+            border-top: 0px;
+        }
+
         #tbPics {
-            width: 1024px;
-            height: 768px;
+            width: 1920px;
+            height: 1080px;
             border: none;
             border-spacing: 0px;
         }
 
         td {
-            width: 102.4px;
-            height: 76.8px;
+            width: 192.0px;
+            height: 108.0px;
             padding: 0;
         }
 
         #divPics {
-            position: absolute;
+            /*position: absolute;
             background-size: contain;
             background-image: url(/Content/pics/bg.jpg);
-            background-repeat: no-repeat;
-            width: 1024px;
-            height: 768px;
+            background-repeat: no-repeat;*/
+            background-color: rgb(236, 237, 238);
+            width: 1920px;
+            height: 1080px;
+            overflow:hidden !important; 
             /*display:block;*/
         }
 
@@ -36,14 +42,15 @@
             background-size: contain;
             background-image: url(/Content/pics/done.jpg);
             background-repeat: no-repeat;
-            width: 1024px;
-            height: 768px;
+            width: 1920px;
+            height: 1080px;
             display: none;
+            overflow:hidden;
             /*z-index: 9999;*/
         }
 
         #divMsg {
-            width: 1024px;
+            width: 1920px;
             height: 300px;
             position: absolute;
             left: 0px;
@@ -54,27 +61,25 @@
             text-align: center;
             line-height: 300px;
             color: whitesmoke;
-            font-size: 5em;
+            font-size: 10em;
             display: none;
             z-index: 9999;
             font-family: 'Microsoft JhengHei';
         }
 
         .marquee {
-            width: 1024px;
-            height: 100px;
+            width: 1920px;
+            height: 150px;
             overflow: hidden;
             /*border: 1px solid #ccc;*/
             /*background: #ccc;*/
-            font-size: 3em;
+            font-size: 4em;
             color: red;
             font-family: 'Microsoft JhengHei';
         }
     </style>
 
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <%--    <script src="Scripts/Chart.min.js" type="text/javascript"></script>
-    <script src="Scripts/Chart.bundle.js"></script>--%>
     <script src="Scripts/jquery-ui-1.8.20.min.js"></script>
     <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
     <script src="/signalr/hubs"></script>
@@ -228,6 +233,7 @@
                 </h1>
             </hgroup>
         </div>--%>
+
     <div id="divMsg"></div>
     <div id="divDone"></div>
     <div id="divPics">
