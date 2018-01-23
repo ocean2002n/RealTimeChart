@@ -42,7 +42,7 @@
         #divDone {
             position: absolute;
             background-size: contain;
-            background-image: url(/Content/pics/done.jpg);
+            background-image: url(/Content/pics/done.png);
             background-repeat: no-repeat;
             width: 1920px;
             height: 1080px;
