@@ -133,44 +133,42 @@
                     }
                 }
 
-                //setTimeout(progress, 100);
                 if (tds.length > 0) {
                     var j = 0;
                     tds[j].show("drop", 1000, function showNext() {
                         if (j < tds.length - 1) {
-                            //setTimeout(progress, 100);
                             tds[++j].show("drop", 1000, showNext);
                         }
                     });
                 }
             }
 
-            var progressbar = $("#progressbar"),
-                progressLabel = $(".progress-label");
-            progressbar.progressbar({
-                value: 0,
-                change: function () {
-                    progressLabel.text(progressbar.progressbar("value") + "%");
-                },
-                complete: function () {
-                    progressLabel.text("100%");
-                }
-            });
+            //var progressbar = $("#progressbar"),
+            //    progressLabel = $(".progress-label");
+            //progressbar.progressbar({
+            //    value: 0,
+            //    change: function () {
+            //        progressLabel.text(progressbar.progressbar("value") + "%");
+            //    },
+            //    complete: function () {
+            //        progressLabel.text("100%");
+            //    }
+            //});
 
-            function progress() {
-                var val = progressbar.progressbar("value") || 0;
-                var nowIndex = $("#tbPics td img:visible").size();
+            //function progress() {
+            //    var val = progressbar.progressbar("value") || 0;
+            //    var nowIndex = $("#tbPics td img:visible").size();
 
-                if (nowIndex > val) {
-                    val += 1;
-                    progressbar.progressbar("value", val);
-                }
-                //console.log(val);
-                if (val <= 99) {
-                    setTimeout(progress, 500);
-                }
-            }
-            setTimeout(progress, 2000);
+            //    if (nowIndex > val) {
+            //        val += 1;
+            //        progressbar.progressbar("value", val);
+            //    }
+            //    if (val <= 99) {
+            //        //setTimeout(progress, 500);
+            //    }
+            //}
+            ////setTimeout(progress, 2000);
+
             //Create the Hub
             var chartHub = $.connection.chartHub;
 
@@ -201,13 +199,12 @@
             chartHub.client.done = function () {
                 $('.marquee').stop();
                 $("#divMsg").hide();
-                $("#progressbar").hide();
+                //$("#progressbar").hide();
                 $("#divPics").fadeOut(2000);
                 $("#divDone").show("explode", 3000);
             };
             chartHub.client.runMsg = function (mode) {
                 if (mode === 1) {
-
                     $mq.marquee('resume').show();
                 } else {
                     $mq.marquee('pause').hide();
@@ -219,9 +216,9 @@
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
-    <div id="progressbar">
+  <%--  <div id="progressbar">
         <div class="progress-label"></div>
-    </div>
+    </div>--%>
     <div id="divMsg"></div>
     <div id="divDone"></div>
     <div id="divPics">
